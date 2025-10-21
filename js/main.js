@@ -36,11 +36,9 @@ class TradingPlatform {
             console.log('User logged in, showing interface');
         } else if (fromLogin) {
             // User came from login but localStorage might not work in incognito
-            // Show interface anyway and let them try to use it
-            console.log('User came from login, showing interface despite localStorage issues');
-            this.isLoggedIn = true;
-            this.currentUser = 'admin'; // Default user
-            this.showUserInterface();
+            // Redirect to login page to get proper credentials
+            console.log('User came from login but localStorage not available, redirecting to login');
+            window.location.href = 'login.html?v=1';
         } else {
             console.log('User not logged in, redirecting to welcome page');
             window.location.href = 'welcome.html?v=1';
@@ -418,7 +416,13 @@ class TradingPlatform {
         };
 
         // Get tasks for current user
-        const currentUser = this.currentUser || 'admin';
+        const currentUser = this.currentUser;
+        
+        if (!currentUser) {
+            console.error('No current user set, cannot load tasks');
+            this.tasks = [];
+            return;
+        }
         
         if (currentUser === 'admin') {
             // Admin sees all tasks from all users
@@ -429,7 +433,7 @@ class TradingPlatform {
             console.log(`Admin loaded ${this.tasks.length} tasks from all users`);
         } else {
             // Regular users see only their tasks
-            this.tasks = allTasks[currentUser] || allTasks['admin'];
+            this.tasks = allTasks[currentUser] || [];
             console.log(`Loaded ${this.tasks.length} tasks for user: ${currentUser}`);
         }
     }

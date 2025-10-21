@@ -92,16 +92,6 @@
                 </a>
             </div>
 
-            <!-- Demo Credentials -->
-            <div class="mt-6 p-4 bg-gray-700 rounded-md">
-                <h3 class="text-sm font-semibold text-gray-300 mb-2">Dane demo:</h3>
-                <div class="text-xs text-gray-400 space-y-1">
-                    <div><strong>Admin:</strong> admin / Mongolia2025</div>
-                    <div><strong>User1:</strong> user1 / user1</div>
-                    <div><strong>User2:</strong> user2 / user2</div>
-                    <div><strong>User3:</strong> user3 / user3</div>
-                </div>
-            </div>
 
             <!-- Back to Welcome -->
             <div class="mt-6 text-center">
@@ -187,15 +177,6 @@
             console.log('localStorage not available, showing login form');
         }
 
-        // Auto-fill demo credentials on double-click
-        document.addEventListener('dblclick', function() {
-            const users = ['admin', 'user1', 'user2', 'user3'];
-            const passwords = ['Mongolia2025', 'user1', 'user2', 'user3'];
-            const randomIndex = Math.floor(Math.random() * users.length);
-            
-            document.getElementById('username').value = users[randomIndex];
-            document.getElementById('password').value = passwords[randomIndex];
-        });
 
         // Enter key handling
         document.addEventListener('keypress', function(e) {
