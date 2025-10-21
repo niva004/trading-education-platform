@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "title": "Mongolia Trading - Podstawy",
-    "description": "Podstawowe zasady tradingu dla mongolskich traderów",
-    "videoUrl": "https://www.youtube.com/embed/GCMfE8CfIeY",
+    "title": "The Syndicate - Podstawy Tradingu",
+    "description": "Elitarne podstawy tradingu dla członków The Syndicate",
+    "videoUrl": "https://www.youtube.com/embed/SlWxhzhLo3A",
     "category": "technical-analysis",
     "difficulty": "beginner",
     "estimatedTime": "5 min",
-    "tags": ["podstawy", "mongolia", "trading", "edukacja"],
+    "tags": ["podstawy", "syndicate", "trading", "elita"],
     "questions": [
       {
         "type": "multiple-choice",
-        "question": "Co jest najważniejsze w tradingu?",
+        "question": "Co jest najważniejsze w profesjonalnym tradingu?",
         "options": [
           "Szybkie zyski",
           "Dyscyplina i plan",
@@ -19,11 +19,11 @@
           "Szczęście"
         ],
         "correct": 1,
-        "explanation": "Dyscyplina i plan tradingowy to fundamenty sukcesu w tradingu."
+        "explanation": "Dyscyplina i plan tradingowy to fundamenty sukcesu w profesjonalnym tradingu."
       },
       {
         "type": "multiple-choice", 
-        "question": "Jakie ryzyko zaleca się na jedną transakcję?",
+        "question": "Jakie ryzyko zaleca The Syndicate na jedną transakcję?",
         "options": [
           "10% kapitału",
           "5% kapitału",
@@ -31,7 +31,7 @@
           "20% kapitału"
         ],
         "correct": 2,
-        "explanation": "Profesjonalni traderzy zalecają ryzyko 1-2% kapitału na jedną transakcję."
+        "explanation": "The Syndicate zaleca ryzyko 1-2% kapitału na jedną transakcję dla bezpieczeństwa."
       }
     ]
   },

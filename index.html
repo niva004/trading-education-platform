@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mongolia Trading Education</title>
+    <title>The Syndicate - Trading Education Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
@@ -17,7 +17,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold text-yellow-400">Mongolia Trading</h1>
+                        <h1 class="text-xl font-bold text-red-500">The Syndicate</h1>
                     </div>
                     <div class="hidden md:block ml-10">
                         <div class="flex items-baseline space-x-4">
@@ -26,6 +26,15 @@
                             <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Panel Admina</a>
                         </div>
                     </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span id="user-welcome" class="text-sm text-gray-300 hidden">Witaj, <span id="username-display"></span></span>
+                    <a href="login.html" id="login-btn" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors">
+                        Zaloguj się
+                    </a>
+                    <button id="logout-btn" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors hidden">
+                        Wyloguj
+                    </button>
                 </div>
             </div>
         </div>
@@ -38,24 +47,26 @@
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 opacity-0" id="hero-title">
-                    <span class="text-yellow-400">Mongolia Trading</span>
+                    <span class="text-red-500">The Syndicate</span>
                     <br>
-                    <span class="text-white">Edukacja dla Mongolów</span>
+                    <span class="text-white">Trading Education</span>
                 </h1>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto opacity-0" id="hero-subtitle">
-                    Platforma edukacyjna dla mongolskich traderów - interaktywne zadania, analiza wykresów i praktyczne ćwiczenia
+                    Elitarna platforma edukacyjna dla profesjonalnych traderów - interaktywne zadania, analiza wykresów i praktyczne ćwiczenia
                 </p>
-                <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors opacity-0" id="hero-button">
-                    Rozpocznij Naukę
-                </button>
+                <div class="opacity-0" id="hero-buttons">
+                    <a href="login.html" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                        Zaloguj się aby rozpocząć
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Tasks Section -->
-        <section class="py-16 bg-gray-800">
+        <section class="py-16 bg-gray-800 hidden" id="tasks-section">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Dostępne Zadania</h2>
+                    <h2 class="text-3xl font-bold text-red-500 mb-4">Dostępne Zadania</h2>
                     <p class="text-gray-300">Wybierz zadanie i rozpocznij naukę</p>
                 </div>
 
@@ -71,7 +82,7 @@
             <div class="bg-gray-800 rounded-lg max-w-6xl w-full max-h-full overflow-y-auto">
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold text-yellow-400" id="modal-title">Zadanie Tradingowe</h3>
+                        <h3 class="text-2xl font-bold text-red-500" id="modal-title">Zadanie Tradingowe</h3>
                         <button id="close-modal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
                     </div>
                     
@@ -101,9 +112,20 @@
                         <!-- Questions will be loaded here -->
                     </div>
 
+                    <!-- Progress Indicator -->
+                    <div class="mt-6 p-4 bg-gray-700 rounded-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm text-gray-300">Postęp odpowiedzi:</span>
+                            <span id="progress-counter" class="text-sm text-yellow-400">0/0</span>
+                        </div>
+                        <div class="w-full bg-gray-600 rounded-full h-2">
+                            <div id="progress-bar" class="bg-yellow-400 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                    </div>
+
                     <!-- Submit Button -->
                     <div class="mt-8 text-center">
-                        <button id="submit-answers" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        <button id="submit-answers" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors disabled:bg-gray-500 disabled:cursor-not-allowed" disabled>
                             Sprawdź Odpowiedzi
                         </button>
                     </div>
@@ -175,7 +197,23 @@
         </div>
     </div>
 
-    <script src="js/chart-analysis.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-xl font-bold text-red-500 mb-2">The Syndicate</h3>
+                <p class="text-gray-300 mb-4">Profesjonalna edukacja tradingowa</p>
+                <div class="text-gray-400 text-sm">
+                    <p>© 2025 The Syndicate Sp. z o.o. Wszystkie prawa zastrzeżone.</p>
+                    <p>Strona internetowa: <a href="https://thesyndicate.pl" class="text-red-400 hover:text-red-300">thesyndicate.pl</a></p>
+                    <p class="mt-2">Strona wykonana przez <a href="https://intelligentagents.pl" class="text-blue-400 hover:text-blue-300">IntelligentAgents.pl</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/chart-analysis.js"></script>
 </body>
 </html>

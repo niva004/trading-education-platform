@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Syndicate - Logowanie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen flex items-center justify-center">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-red-900 to-gray-900"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Login Form -->
+    <div class="relative z-10 w-full max-w-md mx-auto px-4">
+        <div class="bg-gray-800 rounded-lg shadow-2xl p-8">
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-red-500 mb-2">The Syndicate</h1>
+                <p class="text-gray-300">Zaloguj się do platformy edukacyjnej</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-300 mb-2">
+                        Nazwa użytkownika
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username"
+                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                        placeholder="Wprowadź nazwę użytkownika"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-300 mb-2">
+                        Hasło
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                        placeholder="Wprowadź hasło"
+                        required
+                    >
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input 
+                            id="remember-me" 
+                            name="remember-me" 
+                            type="checkbox" 
+                            class="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-600 rounded bg-gray-700"
+                        >
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-300">
+                            Zapamiętaj mnie
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-red-400 hover:text-red-300">
+                        Zapomniałeś hasła?
+                    </a>
+                </div>
+
+                <button 
+                    type="submit" 
+                    class="w-full bg-red-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-colors"
+                >
+                    Zaloguj się
+                </button>
+            </form>
+
+            <!-- Error Message -->
+            <div id="error-message" class="mt-4 p-3 bg-red-900 border border-red-700 rounded-md text-red-200 text-sm hidden">
+                Nieprawidłowa nazwa użytkownika lub hasło
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="mt-4 p-3 bg-green-900 border border-green-700 rounded-md text-green-200 text-sm hidden">
+                Logowanie pomyślne! Przekierowywanie...
+                <br><br>
+                <a href="index.html" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors">
+                    Przejdź do platformy
+                </a>
+            </div>
+
+            <!-- Demo Credentials -->
+            <div class="mt-6 p-4 bg-gray-700 rounded-md">
+                <h3 class="text-sm font-semibold text-gray-300 mb-2">Dane demo:</h3>
+                <div class="text-xs text-gray-400 space-y-1">
+                    <div><strong>Admin:</strong> admin / Mongolia2025</div>
+                    <div><strong>User1:</strong> user1 / user1</div>
+                    <div><strong>User2:</strong> user2 / user2</div>
+                    <div><strong>User3:</strong> user3 / user3</div>
+                </div>
+            </div>
+
+            <!-- Back to Welcome -->
+            <div class="mt-6 text-center">
+                <a href="welcome.html" class="text-sm text-gray-400 hover:text-gray-300">
+                    ← Powrót do strony głównej
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="absolute bottom-0 left-0 right-0 bg-gray-800 py-4">
+        <div class="max-w-md mx-auto px-4 text-center">
+            <div class="text-gray-400 text-xs">
+                <p>© 2025 The Syndicate Sp. z o.o.</p>
+                <p>Strona wykonana przez <a href="https://intelligentagents.pl" class="text-blue-400 hover:text-blue-300">IntelligentAgents.pl</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error-message');
+            const successDiv = document.getElementById('success-message');
+            
+            // Hide previous messages
+            errorDiv.classList.add('hidden');
+            successDiv.classList.add('hidden');
+            
+            // Check credentials
+            const validCredentials = {
+                'admin': 'Mongolia2025',
+                'user1': 'user1',
+                'user2': 'user2', 
+                'user3': 'user3'
+            };
+            
+            if (validCredentials[username] && validCredentials[username] === password) {
+                // Show success message
+                successDiv.classList.remove('hidden');
+                
+                // Store login state (with error handling for incognito)
+                try {
+                    localStorage.setItem('syndicate_logged_in', 'true');
+                    localStorage.setItem('syndicate_username', username);
+                    console.log('Login state stored in localStorage');
+                } catch (error) {
+                    console.log('localStorage not available, continuing with login');
+                }
+                
+                console.log('Login successful, redirecting to platform...');
+                
+                // Redirect directly to platform after login
+                setTimeout(() => {
+                    console.log('Redirecting to platform...');
+                    window.location.href = 'index.html?v=1';
+                }, 500);
+            } else {
+                // Show error message
+                errorDiv.classList.remove('hidden');
+                
+                // Shake animation
+                anime({
+                    targets: '#login-form',
+                    translateX: [-10, 10, -10, 10, 0],
+                    duration: 500,
+                    easing: 'easeInOutQuad'
+                });
+            }
+        });
+
+        // Check if already logged in
+        try {
+            if (localStorage.getItem('syndicate_logged_in') === 'true') {
+                window.location.href = 'index.html';
+            }
+        } catch (error) {
+            console.log('localStorage not available, showing login form');
+        }
+
+        // Auto-fill demo credentials on double-click
+        document.addEventListener('dblclick', function() {
+            const users = ['admin', 'user1', 'user2', 'user3'];
+            const passwords = ['Mongolia2025', 'user1', 'user2', 'user3'];
+            const randomIndex = Math.floor(Math.random() * users.length);
+            
+            document.getElementById('username').value = users[randomIndex];
+            document.getElementById('password').value = passwords[randomIndex];
+        });
+
+        // Enter key handling
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('login-form').dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Syndicate - Trading Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-800 border-b border-gray-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-red-500">The Syndicate</h1>
+                    </div>
+                    <div class="hidden md:block ml-10">
+                        <div class="flex items-baseline space-x-4">
+                            <a href="welcome.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-red-400">Strona główna</a>
+                            <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Platforma</a>
+                            <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">O nas</a>
+                            <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="login.html?v=1" id="nav-login-btn" class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors">
+                        Zaloguj się
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 py-20 pt-24">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 opacity-0" id="hero-title">
+                <span class="text-red-500">The Syndicate</span>
+                <br>
+                <span class="text-white">Trading Education</span>
+            </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto opacity-0" id="hero-subtitle">
+                    Profesjonalna platforma edukacyjna dla traderów. Dołącz do elitarnej grupy profesjonalistów.
+                    <br><span class="text-red-400 font-semibold">Zaloguj się, aby uzyskać dostęp do zadań.</span>
+                </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0" id="hero-buttons">
+                <a href="login.html?v=1" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                    Zaloguj się
+                </a>
+                <a href="#about" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
+                    Dowiedz się więcej
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-500 mb-4">O The Syndicate</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Jesteśmy elitarną grupą profesjonalnych traderów, którzy dzielą się swoją wiedzą i doświadczeniem. 
+                    Nasza platforma edukacyjna to miejsce, gdzie przyszli traderzy mogą rozwijać swoje umiejętności.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6 bg-gray-700 rounded-lg">
+                    <div class="text-4xl font-bold text-red-500 mb-2">500+</div>
+                    <div class="text-gray-300">Aktywnych traderów</div>
+                </div>
+                <div class="text-center p-6 bg-gray-700 rounded-lg">
+                    <div class="text-4xl font-bold text-red-500 mb-2">95%</div>
+                    <div class="text-gray-300">Wskaźnik sukcesu</div>
+                </div>
+                <div class="text-center p-6 bg-gray-700 rounded-lg">
+                    <div class="text-4xl font-bold text-red-500 mb-2">24/7</div>
+                    <div class="text-gray-300">Wsparcie</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Nasze wartości</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-white">Profesjonalizm</h4>
+                                <p class="text-gray-300">Najwyższe standardy w edukacji tradingowej</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-white">Dyscyplina</h4>
+                                <p class="text-gray-300">Systematyczne podejście do nauki i tradingu</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex-shrink-0 mt-1"></div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-white">Wsparcie</h4>
+                                <p class="text-gray-300">Indywidualne podejście do każdego członka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-4">Dane firmy</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <div><strong>Nazwa:</strong> The Syndicate Sp. z o.o.</div>
+                        <div><strong>NIP:</strong> 123-456-78-90</div>
+                        <div><strong>REGON:</strong> 123456789</div>
+                        <div><strong>Adres:</strong> ul. Tradingowa 1, 00-001 Warszawa</div>
+                        <div><strong>Email:</strong> info@thesyndicate.pl</div>
+                        <div><strong>Telefon:</strong> +48 123 456 789</div>
+                        <div><strong>Strona:</strong> <a href="https://thesyndicate.pl" class="text-red-400 hover:text-red-300">thesyndicate.pl</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-500 mb-4">Co oferujemy</h2>
+                <p class="text-gray-300">Kompleksowa edukacja tradingowa na najwyższym poziomie</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Analiza techniczna</h3>
+                    <p class="text-gray-300">Naucz się profesjonalnej analizy wykresów i wskaźników</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Zarządzanie ryzykiem</h3>
+                    <p class="text-gray-300">Opanuj sztukę kontroli ryzyka i ochrony kapitału</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Psychologia tradingu</h3>
+                    <p class="text-gray-300">Rozwój mentalny i kontrola emocji w tradingu</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Strategie tradingowe</h3>
+                    <p class="text-gray-300">Sprawdzone metodyki i systemy tradingowe</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Mentoring</h3>
+                    <p class="text-gray-300">Indywidualne wsparcie od doświadczonych traderów</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="text-red-500 text-3xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Platforma online</h3>
+                    <p class="text-gray-300">Dostęp 24/7 do materiałów edukacyjnych</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-red-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Gotowy dołączyć do The Syndicate?</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Rozpocznij swoją przygodę z profesjonalnym tradingiem już dziś
+            </p>
+            <a href="login.html?v=1" class="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Zaloguj się
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-xl font-bold text-red-500 mb-2">The Syndicate</h3>
+                <p class="text-gray-300 mb-4">Profesjonalna edukacja tradingowa</p>
+                <div class="text-gray-400 text-sm">
+                    <p>© 2025 The Syndicate Sp. z o.o. Wszystkie prawa zastrzeżone.</p>
+                    <p>Strona internetowa: <a href="https://thesyndicate.pl" class="text-red-400 hover:text-red-300">thesyndicate.pl</a></p>
+                    <p class="mt-2">Strona wykonana przez <a href="https://intelligentagents.pl" class="text-blue-400 hover:text-blue-300">IntelligentAgents.pl</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        console.log('Welcome page loaded');
+        console.log('Current URL:', window.location.href);
+        
+        // Check if user is logged in
+        let isLoggedIn = false;
+        try {
+            isLoggedIn = localStorage.getItem('syndicate_logged_in') === 'true';
+        } catch (error) {
+            console.log('localStorage not available in incognito mode');
+        }
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const justLoggedIn = urlParams.get('logged') === 'true';
+        
+        console.log('Login status:', { isLoggedIn, justLoggedIn });
+        console.log('LocalStorage data:', {
+            logged_in: localStorage.getItem('syndicate_logged_in'),
+            username: localStorage.getItem('syndicate_username')
+        });
+        
+        // Only redirect if user is logged in AND didn't just log in
+        if (isLoggedIn && !justLoggedIn) {
+            // User is logged in but didn't just log in, redirect to platform
+            console.log('Redirecting to platform...');
+            window.location.href = 'index.html?v=1';
+        } else if (isLoggedIn && justLoggedIn) {
+            // User just logged in, show success message and platform button
+            console.log('Showing logged in interface...');
+            showLoggedInInterface();
+        } else {
+            // User not logged in, show normal welcome page
+            console.log('Showing normal welcome page for non-logged user');
+        }
+        
+        function showLoggedInInterface() {
+            console.log('Updating interface for logged in user');
+            
+            // Update navigation button
+            const navButton = document.getElementById('nav-login-btn');
+            if (navButton) {
+                navButton.href = 'index.html?v=1';
+                navButton.textContent = 'Przejdź do platformy';
+                console.log('Navigation button updated');
+            }
+            
+            // Update hero buttons
+            const heroButtons = document.getElementById('hero-buttons');
+            if (heroButtons) {
+                heroButtons.innerHTML = `
+                    <a href="index.html?v=1" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                        Przejdź do platformy
+                    </a>
+                    <a href="#about" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors">
+                        Dowiedz się więcej
+                    </a>
+                `;
+                console.log('Hero buttons updated');
+            }
+            
+            // Update CTA section
+            const ctaSection = document.querySelector('.py-16.bg-red-900');
+            if (ctaSection) {
+                const ctaButton = ctaSection.querySelector('a');
+                if (ctaButton) {
+                    ctaButton.href = 'index.html?v=1';
+                    ctaButton.textContent = 'Przejdź do platformy';
+                    console.log('CTA button updated');
+                }
+            }
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'fixed top-20 right-4 bg-green-600 text-white p-4 rounded-lg z-50';
+            successMessage.innerHTML = `
+                <div class="flex items-center">
+                    <span class="mr-2">✅</span>
+                    <span>Zalogowano pomyślnie!</span>
+                </div>
+            `;
+            document.body.appendChild(successMessage);
+            console.log('Success message shown');
+            
+            // Remove success message after 3 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 3000);
+        }
+
+        // Hero animations
+        anime.timeline()
+            .add({
+                targets: '#hero-title',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                duration: 1000,
+                easing: 'easeOutExpo'
+            })
+            .add({
+                targets: '#hero-subtitle',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 800,
+                easing: 'easeOutExpo'
+            }, '-=500')
+            .add({
+                targets: '#hero-buttons',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 600,
+                easing: 'easeOutExpo'
+            }, '-=300');
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

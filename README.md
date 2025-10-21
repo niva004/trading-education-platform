@@ -1,6 +1,6 @@
-# Mongolia Trading Education Platform
+# The Syndicate - Trading Education Platform
 
-Platforma edukacyjna dla mongolskich traderów z interaktywnymi zadaniami, filmami YouTube i quizami.
+Elitarna platforma edukacyjna dla profesjonalnych traderów z interaktywnymi zadaniami, filmami YouTube i quizami.
 
 ## Funkcjonalności
 
@@ -323,11 +323,12 @@ loadSampleTasks() {
 ## 🎯 PODSUMOWANIE ZMIAN
 
 ### ✅ Wykonane zadania:
-1. **Rebranding na Mongolia Trading Education** - zmieniono nazwę firmy i branding
-2. **Dodano film YouTube** - `https://www.youtube.com/shorts/GCMfE8CfIeY` jako pierwsze zadanie
-3. **Kompletny workflow** - instrukcje edycji, dodawania, usuwania treści
-4. **Instrukcje hostingu** - 5 różnych opcji hostingu (GitHub Pages, Netlify, Vercel, Firebase, VPS)
-5. **Wyjaśnienie persystencji danych** - jak zapisywane są nowe pytania
+1. **Rebranding na The Syndicate** - zmieniono nazwę firmy i branding na elitarną organizację
+2. **Dodano stronę powitalną** - `welcome.html` z informacjami o firmie The Syndicate
+3. **System logowania** - statyczne logowanie (admin/Mongolia2025) z zabezpieczeniem dostępu
+4. **Zabezpieczenie zadań** - zadania widoczne tylko po zalogowaniu
+5. **Dodano film YouTube** - `https://www.youtube.com/watch?v=SlWxhzhLo3A` jako pierwsze zadanie
+6. **Strona internetowa** - thesyndicate.pl dodana do danych firmy
 
 ### 🚀 Jak uruchomić:
 ```bash
@@ -336,9 +337,10 @@ python -m http.server 8000
 # Otwórz: http://localhost:8000
 ```
 
-### 📝 Jak dodawać zadania:
-1. **Szybko (tymczasowo)**: Panel Admina → dodaj zadanie → zapisz
-2. **Na stałe**: Edytuj `data/sample-tasks.json` → dodaj obiekt JSON → zapisz plik
+### 🔐 Jak się zalogować:
+1. **Dane logowania**: admin / Mongolia2025
+2. **Dostęp**: Zadania widoczne tylko po zalogowaniu
+3. **Wylogowanie**: Przycisk "Wyloguj" w prawym górnym rogu
 
 ### 🌐 Jak hostować:
 - **Najłatwiej**: Netlify (przeciągnij folder)
@@ -347,8 +349,10 @@ python -m http.server 8000
 
 ## Licencja
 
-Projekt stworzony dla celów edukacyjnych Mongolia Trading. Można swobodnie modyfikować i rozwijać.
+Projekt stworzony dla celów edukacyjnych The Syndicate. Można swobodnie modyfikować i rozwijać.
 
 ## Kontakt
 
-W przypadku pytań lub problemów z aplikacją Mongolia Trading Education, proszę o kontakt.
+W przypadku pytań lub problemów z aplikacją The Syndicate Trading Education, proszę o kontakt.
+
+**Strona wykonana przez:** [IntelligentAgents.pl](https://intelligentagents.pl) - Specjaliści od inteligentnych systemów AI i nowoczesnych stron internetowych.
