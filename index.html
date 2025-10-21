@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongolia Trading Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-800 border-b border-gray-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-yellow-400">Mongolia Trading</h1>
+                    </div>
+                    <div class="hidden md:block ml-10">
+                        <div class="flex items-baseline space-x-4">
+                            <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Zadania</a>
+                            <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Moje postępy</a>
+                            <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Panel Admina</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 opacity-0" id="hero-title">
+                    <span class="text-yellow-400">Mongolia Trading</span>
+                    <br>
+                    <span class="text-white">Edukacja dla Mongolów</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto opacity-0" id="hero-subtitle">
+                    Platforma edukacyjna dla mongolskich traderów - interaktywne zadania, analiza wykresów i praktyczne ćwiczenia
+                </p>
+                <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors opacity-0" id="hero-button">
+                    Rozpocznij Naukę
+                </button>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="py-16 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Dostępne Zadania</h2>
+                    <p class="text-gray-300">Wybierz zadanie i rozpocznij naukę</p>
+                </div>
+
+                <!-- Task Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="tasks-container">
+                    <!-- Task cards will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Task Modal -->
+        <div id="task-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-gray-800 rounded-lg max-w-6xl w-full max-h-full overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold text-yellow-400" id="modal-title">Zadanie Tradingowe</h3>
+                        <button id="close-modal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                    </div>
+                    
+                    <!-- Video Container -->
+                    <div class="mb-6">
+                        <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden" id="video-container">
+                            <!-- YouTube iframe will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Chart Analysis Section -->
+                    <div id="chart-section" class="mb-6 hidden">
+                        <h4 class="text-lg font-semibold text-white mb-4">Analiza Wykresu</h4>
+                        <div class="chart-container">
+                            <div id="trading-chart" style="width: 100%; height: 400px;"></div>
+                        </div>
+                        <div class="mt-4 p-4 bg-gray-700 rounded-lg">
+                            <p class="text-sm text-gray-300">
+                                Przeanalizuj powyższy wykres i odpowiedz na pytania. 
+                                Wykres zawiera świece japońskie, średnie kroczące SMA 20 i SMA 50.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Question Section -->
+                    <div class="space-y-6" id="question-section">
+                        <!-- Questions will be loaded here -->
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-8 text-center">
+                        <button id="submit-answers" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                            Sprawdź Odpowiedzi
+                        </button>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="results-section" class="mt-6 hidden">
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-yellow-400 mb-4">Wyniki</h4>
+                            <div id="results-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Admin Panel Modal -->
+    <div id="admin-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-lg max-w-4xl w-full max-h-full overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-yellow-400">Panel Administracyjny</h3>
+                    <button id="close-admin-modal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                </div>
+                
+                <!-- Admin Form -->
+                <form id="admin-form" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Tytuł zadania</label>
+                        <input type="text" id="task-title" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-yellow-400">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">URL filmu YouTube</label>
+                        <input type="text" id="task-video" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-yellow-400">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Opis zadania</label>
+                        <textarea id="task-description" rows="3" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-yellow-400"></textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Kategoria</label>
+                        <select id="task-category" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:border-yellow-400">
+                            <option value="technical-analysis">Analiza Techniczna</option>
+                            <option value="fundamental-analysis">Analiza Fundamentalna</option>
+                            <option value="risk-management">Zarządzanie Ryzykiem</option>
+                            <option value="psychology">Psychologia Tradingu</option>
+                        </select>
+                    </div>
+
+                    <!-- Questions Section -->
+                    <div class="border-t border-gray-600 pt-6">
+                        <h4 class="text-lg font-semibold text-yellow-400 mb-4">Pytania</h4>
+                        <div id="questions-list" class="space-y-4">
+                            <!-- Questions will be added here -->
+                        </div>
+                        <button type="button" id="add-question" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                            Dodaj Pytanie
+                        </button>
+                    </div>
+
+                    <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        Zapisz Zadanie
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chart-analysis.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

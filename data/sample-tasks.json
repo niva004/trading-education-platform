@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "title": "Mongolia Trading - Podstawy",
+    "description": "Podstawowe zasady tradingu dla mongolskich traderów",
+    "videoUrl": "https://www.youtube.com/embed/GCMfE8CfIeY",
+    "category": "technical-analysis",
+    "difficulty": "beginner",
+    "estimatedTime": "5 min",
+    "tags": ["podstawy", "mongolia", "trading", "edukacja"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Co jest najważniejsze w tradingu?",
+        "options": [
+          "Szybkie zyski",
+          "Dyscyplina i plan",
+          "Intuicja",
+          "Szczęście"
+        ],
+        "correct": 1,
+        "explanation": "Dyscyplina i plan tradingowy to fundamenty sukcesu w tradingu."
+      },
+      {
+        "type": "multiple-choice", 
+        "question": "Jakie ryzyko zaleca się na jedną transakcję?",
+        "options": [
+          "10% kapitału",
+          "5% kapitału",
+          "1-2% kapitału",
+          "20% kapitału"
+        ],
+        "correct": 2,
+        "explanation": "Profesjonalni traderzy zalecają ryzyko 1-2% kapitału na jedną transakcję."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Formacja świecowa - Hammer",
+    "description": "Zidentyfikuj formację świecową Hammer i jej znaczenie",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "technical-analysis",
+    "difficulty": "intermediate",
+    "estimatedTime": "20 min",
+    "tags": ["formacje świecowe", "hammer", "price action", "odwrócenie trendu"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Co sygnalizuje formacja Hammer?",
+        "options": [
+          "Kontynuację spadków",
+          "Możliwe odwrócenie trendu",
+          "Brak zmian",
+          "Silną wyprzedaż"
+        ],
+        "correct": 1,
+        "explanation": "Hammer jest formacją odwrócenia trendu, sygnalizującą potencjalne zakończenie spadków."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Zarządzanie ryzykiem - Stop Loss",
+    "description": "Naucz się ustawiać odpowiedni poziom Stop Loss",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "risk-management",
+    "difficulty": "beginner",
+    "estimatedTime": "25 min",
+    "tags": ["risk management", "stop loss", "money management", "bezpieczeństwo"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Jakie jest zalecane ryzyko na jedną transakcję?",
+        "options": [
+          "1-2% kapitału",
+          "5-10% kapitału",
+          "20% kapitału",
+          "50% kapitału"
+        ],
+        "correct": 0,
+        "explanation": "Profesjonalni traderzy zalecają ryzyko na poziomie 1-2% kapitału na jedną transakcję."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Psychologia tradingu - FOMO",
+    "description": "Jak radzić sobie z FOMO (Fear of Missing Out)",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "psychology",
+    "difficulty": "advanced",
+    "estimatedTime": "30 min",
+    "tags": ["psychologia", "FOMO", "emocje", "discipline"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Jak przeciwdziałać FOMO?",
+        "options": [
+          "Handlować częściej",
+          "Śledzić media społecznościowe",
+          "Stosować plan tradingowy",
+          "Używać większej dźwigni"
+        ],
+        "correct": 2,
+        "explanation": "Plan tradingowy pomaga podejmować racjonalne decyzje i unikać emocjonalnych reakcji."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Analiza fundamentalna - GDP",
+    "description": "Jak wpływają dane makroekonomiczne na rynek",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "fundamental-analysis",
+    "difficulty": "intermediate",
+    "estimatedTime": "35 min",
+    "tags": ["fundamenty", "GDP", "makroekonomia", "dane ekonomiczne"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Jak wpływa wyższe niż oczekiwane GDP?",
+        "options": [
+          "Osłabia walutę",
+          "Wzmacnia walutę",
+          "Nie ma wpływu",
+          "Zależy od sytuacji"
+        ],
+        "correct": 1,
+        "explanation": "Lepsze od oczekiwań dane o GDP wzmacniają walutę, świadcząc o dobrej kondycji gospodarki."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Strategia Price Action",
+    "description": "Zastosowanie Price Action w tradingu",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "technical-analysis",
+    "difficulty": "advanced",
+    "estimatedTime": "40 min",
+    "tags": ["price action", "czysta cena", "strategia", "zaawansowane"],
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "Co jest najważniejsze w Price Action?",
+        "options": [
+          "Wskaźniki techniczne",
+          "Cena i jej zachowanie",
+          "Wiadomości fundamentalne",
+          "Opinie analityków"
+        ],
+        "correct": 1,
+        "explanation": "Price Action koncentruje się na analizie samego zachowania ceny, bez użycia wskaźników."
+      }
+    ]
+  }
+]
